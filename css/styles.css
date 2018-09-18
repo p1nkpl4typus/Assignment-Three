@@ -1,0 +1,73 @@
+/* *********************** */
+/* Branding Notes */
+/* *********************** */
+/* Colours:
+#424250 - Background
+#33333D - Alt Background
+#A87344 - Link Text
+
+Hero:
+Photo by Paweł Czerwiński on Unsplash */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #fff;
+}
+
+header {
+    background: #eee;
+    height: 66px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+}
+
+.logo {
+    margin-left: 20px;
+}
+
+header ul {
+    display: flex;
+    margin-right: 20px;
+    list-style: none;
+    text-transform: uppercase;
+    height: 100%;
+    align-items: center;
+}
+
+header ul li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+header ul li a {
+    text-decoration: none;
+    display: block;
+    height: 100%;
+    padding: 20px;
+}
+
+.hero {
+    height: 600px;
+    background-color: #fff;
+    background: linear-gradient(180deg, #eee, transparent, #fff),
+                url('../assets/hero.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+main {
+    height: 700px;
+}
+
+footer {
+    height: 300px;
+    background:#eee;
+}
