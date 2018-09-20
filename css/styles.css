@@ -295,6 +295,11 @@ footer {
     color: #ffc9c9;
 }
 
+@media screen and (max-width: 900px) {
+    .item-wrap {
+        flex-direction: column;
+    }
+}
 
 
 @media screen and (max-width: 615px) {
@@ -319,6 +324,27 @@ footer {
 
     .footer {
         height: 300px;
+    }
+
+    .feature {
+        padding: 50px;
+        text-align: center;
+    }
+
+    .feature h2 {
+        font-size: 2em;
+    }
+
+    .item {
+        padding: 0 20px;
+    }
+
+    .extra {
+        display: none;
+    }
+
+    input[type="email"] {
+        width: 200px;
     }
 }
 
