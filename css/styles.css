@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700|Playfair+Display:400,900');
 
+/* **************************
+GLOBAL STYLES
+************************** */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -16,6 +20,7 @@ body {
     color: #222;
     font-family: 'Lato', sans-serif;
     font-size: 18px;
+    line-height: 1.6;
 }
 
 h1,
@@ -24,7 +29,19 @@ h3 {
     font-family: 'Playfair Display', serif;
 }
 
-header {
+i {
+    color: #B94E4B;
+}
+
+.debugger {
+    background: red;
+}
+
+/* **************************
+NAVBAR
+************************** */
+
+nav {
     background: rgba(255, 255, 255, 0.6);
     height: 66px;
     display: flex;
@@ -44,7 +61,7 @@ header {
     margin-left: 15px;
 }
 
-header ul {
+nav ul {
     display: flex;
     margin-right: 20px;
     list-style: none;
@@ -53,12 +70,12 @@ header ul {
     align-items: center;
 }
 
-header ul li {
+nav ul li {
     display: inline-block;
     margin: 0 5px;
 }
 
-header ul li a {
+nav ul li a {
     text-decoration: none;
     display: block;
     height: 100%;
@@ -67,7 +84,7 @@ header ul li a {
     transition: 0.3s;
 }
 
-header ul li a:hover {
+nav ul li a:hover {
     padding: 10px 20px;
     border-top: 1px solid #a87344;
     border-bottom: 1px solid #a87344;
@@ -77,6 +94,11 @@ header ul li a:hover {
 .collapse {
     display: none;
 }
+
+
+/* **************************
+HEADER
+************************** */
 
 .hero {
     display: flex;
@@ -91,7 +113,7 @@ header ul li a:hover {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    transition: 0.4s;
+    transition: 0.4s; /* Hero Re-Size */
 }
 
 .msg h1,
@@ -124,9 +146,10 @@ header ul li a:hover {
     background: #B94E4B;
 }
 
-main {
-    /* box-shadow: 0 -5px 50px 0 #aaa; */
-}
+/* **************************
+MAIN
+************************** */
+
 
 .feature {
     display: flex;
@@ -153,20 +176,23 @@ main {
 .item-wrap,
 .rate-wrap {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .item {
+    flex: 1 1 350px;
     text-align: justify;
-    line-height: 1.6;
     padding: 0 40px;
 }
 
 .item i {
-    color: #B94E4B;
-    margin-bottom: 20px;
+   margin-bottom: 20px;
+   font-size: 2em;
 }
 
-.display-1 {
+.img-break-1 {
     height: 220px;
     background-color: #fff;
     background: url('../assets/second.jpg');
@@ -176,7 +202,19 @@ main {
     background-attachment: fixed;
 }
 
-.display-2 {
+.rate-wrap {
+    justify-content: space-around;
+    font-size: 14px;
+    /* height: 200px; */
+    overflow: hidden;
+}
+
+.rate {
+    flex: 1 1 150px;
+    padding: 20px;
+}
+
+.img-break-2 {
     height: 220px;
     background-color: #fff;
     background: url('../assets/third.jpg');
@@ -184,20 +222,6 @@ main {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-}
-
-
-.rate-wrap {
-    justify-content: space-around;
-    font-size: 14px;
-}
-
-.rate {
-    padding: 20px;
-}
-
-.rate i {
-    color: #6B251B;
 }
 
 .subscribe {
@@ -217,12 +241,7 @@ input[type="email"] {
 }
 
 input[type="email"]:hover {
-    padding: 5px;
-    width: 400px;
     border: 1px solid #B94E4B;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px;
 }
 
 .subscribe input[type="submit"] {
@@ -238,6 +257,10 @@ input[type="email"]:hover {
     background: #B94E4B;
     cursor: pointer;
 }
+
+/* **************************
+FOOTER
+************************** */
 
 footer {
     display: flex;
@@ -295,15 +318,19 @@ footer {
     color: #ffc9c9;
 }
 
-@media screen and (max-width: 900px) {
-    .item-wrap {
-        flex-direction: column;
+/* **************************
+MEDIA QUERIES
+************************** */
+
+@media screen and (max-width: 1000px) {
+    .extra {
+        display: none;
     }
 }
 
 
 @media screen and (max-width: 615px) {
-    header ul {
+    nav ul {
         display: none;
     }
 
@@ -327,24 +354,25 @@ footer {
     }
 
     .feature {
-        padding: 50px;
-        text-align: center;
+        padding: 20px;
     }
 
-    .feature h2 {
+    .feature h2,
+    .feature h3 {
         font-size: 2em;
+        text-align: center;
     }
 
     .item {
         padding: 0 20px;
     }
 
-    .extra {
-        display: none;
+    .item i {
+        font-size: 1.5em;
     }
 
     input[type="email"] {
-        width: 200px;
+        width: 300px;
     }
 }
 
